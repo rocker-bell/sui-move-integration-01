@@ -8,15 +8,10 @@ This project demonstrates core Sui concepts such as **object ownership, permissi
 task_manager
 
 #  Module
-☑ Move / Sui Core  
-☐ Walrus  
-☐ Seal  
-☐ Nautilus  
-
-
+Move / Sui Core  
 
 #  Deployment Type
-☑ Testnet  
+Testnet  
 
 # What was built
 
@@ -80,7 +75,7 @@ https://suiexplorer.com/txblock/E599L4h3EucX7B7GW4mHG35YxfD43A4c4xMSGJnEwa6P
 
 #  Expected Usage / Impact
 
-This project demonstrates a foundational pattern for:
+This startup project demonstrates a foundational basic pattern for:
 
 - On-chain task tracking systems
 - Decentralized productivity applications
@@ -90,12 +85,13 @@ This project demonstrates a foundational pattern for:
 
 #  Status
 
-☑ Completed  
-☐ Iterating  
-
+Completed  
 
 #  Key Learnings
 
+For first-time use and exploration of the Sui ecosystem, these are the main learning outcomes:
+
+- Sui project architecture and initialisation steps
 - Sui object model and ownership rules
 - Move module structure
 - On-chain state design
@@ -105,7 +101,6 @@ This project demonstrates a foundational pattern for:
 ## Third-Party Tools & Disclaimer
 
 This project may interact with or reference third-party tools and services, these tools are used strictly for development and educational purposes.
-
 
 #  Notes
 
