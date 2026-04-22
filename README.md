@@ -8,7 +8,7 @@ This project demonstrates core Sui concepts such as **object ownership, permissi
 task_manager
 
 #  Module
-Move / Sui Core  
+Move / Sui Core  - walrus
 
 #  Deployment Type
 Testnet  
@@ -55,21 +55,26 @@ It has been compiled and deployed as part of the published Sui package on testne
 
 ##  Package ID (Contract Address)
 
-0x80107ad031a3d1715b653cf7dc510e990bac3686ba27c657a2aaf468941508d9
+- task_manager = 0x80107ad031a3d1715b653cf7dc510e990bac3686ba27c657a2aaf468941508d9
+- task_manager_walrus =  0x8dff3a592071232c54e6effbc617e32fcfd6a937b3f0831e517b44b302c0e94e 
 
 
 
 ##  Explorer Link
 
-https://suiexplorer.com/object/0x80107ad031a3d1715b653cf7dc510e990bac3686ba27c657a2aaf468941508d9
+- https://suiexplorer.com/object/0x80107ad031a3d1715b653cf7dc510e990bac3686ba27c657a2aaf468941508d9
+- https://suiexplorer.com/object/0x8dff3a592071232c54e6effbc617e32fcfd6a937b3f0831e517b44b302c0e94e
 
 
 
 ##  Deployment Transaction
 
-E599L4h3EucX7B7GW4mHG35YxfD43A4c4xMSGJnEwa6P
+task_manager_transaction_digest: E599L4h3EucX7B7GW4mHG35YxfD43A4c4xMSGJnEwa6P
+task_manager_walrus_transaction_digest: EJmYDgVwWbMDkHSfUtaGkBA8YHcKrhtGvzxvNTJiSVU3
 
 https://suiexplorer.com/txblock/E599L4h3EucX7B7GW4mHG35YxfD43A4c4xMSGJnEwa6P
+https://suiexplorer.com/txblock/EJmYDgVwWbMDkHSfUtaGkBA8YHcKrhtGvzxvNTJiSVU3
+
 
 
 
@@ -104,7 +109,11 @@ For first-time use and exploration of the Sui ecosystem, these are the main lear
 
 This project may interact with or reference third-party tools and services, these tools are used strictly for development and educational purposes.
 
-Repo Link : https://github.com/rocker-bell/sui-move-integration-01
+Repo Link : Repo Link : https://github.com/rocker-bell/sui-move-integration-01/
+
+Repo Link : https://github.com/rocker-bell/sui-move-integration-01/walrus
+
+
 
 #  Notes
 

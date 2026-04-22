@@ -151,6 +151,7 @@ import { useState } from "react";
 import { useSignAndExecuteTransaction, useCurrentAccount } from "@mysten/dapp-kit";
 import { createTaskTx } from "../contracts/taskContract";
 import { uploadToWalrus, getFromWalrus } from "../lib/walrus";
+import { ConnectButton } from "@mysten/dapp-kit";
 
 export default function WalrusTaskApp() {
   const account = useCurrentAccount();
@@ -163,7 +164,8 @@ export default function WalrusTaskApp() {
     if (!input || !account) return;
 
     // 1. Upload to Walrus (REAL)
-    const blobId = await uploadToWalrus(input, account);
+    // const blobId = await uploadToWalrus(input, account);
+    const blobId = await uploadToWalrus(input, account.address);
 
     // 2. Store blobId on Sui
     const encoder = new TextEncoder();
@@ -188,9 +190,12 @@ export default function WalrusTaskApp() {
 
   return (
     <div style={{ padding: 20 }}>
-      <h2>🌊 Walrus Task App (REAL)</h2>
+      <div style={{ padding: 20 }}>
+  <h2>🌊 Walrus Task App (REAL)</h2>
 
-      {!account && <p>Connect wallet first</p>}
+  <ConnectButton />
+
+  {!account && <p>Connect wallet first</p>} </div>
 
       <input
         value={input}
