@@ -1,9 +1,13 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-   base: "/sui-move-integration-01/",
-    
-})
+  base: "/sui-move-integration-01/",
+  optimizeDeps: {
+    include: ["@mysten/sui.js", "poseidon-lite"], // 🔥 pre-bundle Sui.js for the browser
+  },
+  resolve: {
+    dedupe: ["@mysten/sui.js", "poseidon-lite"],
+  },
+});

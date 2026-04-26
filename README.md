@@ -8,7 +8,7 @@ This project demonstrates core Sui concepts such as **object ownership, permissi
 task_manager
 
 #  Module
-Move / Sui Core  
+Move / Sui Core  / walrus
 
 #  Deployment Type
 Testnet  
@@ -23,6 +23,10 @@ This project implements a decentralized task management system where users can:
 - Ensure only the task owner can update their task
 
 Each task is represented as an **on-chain object** owned by its creator.
+
+this projet is still in it's beta testing phase
+
+the walrus.jsx applies the walrus integration from ./lib/walrus.js which imports the walrus client and introduce walrus methods such as UploadTowalrus that returns the bolbId and getFromwalrus that returns the uploaded walrus objects but the blobId or userAccount (wallet) that deployed to walrus
 
 
 
@@ -97,6 +101,11 @@ For first-time use and exploration of the Sui ecosystem, these are the main lear
 - On-chain state design
 - Deployment to Sui testnet
 - Transaction and package verification
+- use case of walrus storage
+
+# future outcomes
+
+Full integration of SUI and Walrus dependencies that uploads to SUI directly after a successful Walrus upload. And full working application logic.
 
 
 
