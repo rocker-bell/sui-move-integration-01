@@ -2,25 +2,32 @@ import React, { useState } from "react";
 import { encryptTask, decryptTask } from "../lib/seal";
 import { createTaskTx } from "../contracts/taskContract";
 
-export default function SealTestDemo({ userPublicKey, userPrivateKey }) {
+export default function SealTestDemo({ sealClient }) {
   const [input, setInput] = useState("");
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  // ➕ Create encrypted task
+  // ➕ CREATE
   const handleCreate = async () => {
-    if (!input) return;
+    if (!input || !sealClient) return;
 
     try {
       setLoading(true);
 
-      // 1. encrypt
-      const encrypted = await encryptTask(input, userPublicKey);
+      const policy = {
+        threshold: 1,
+        packageId: "0x1",
+        id: "0x2",
+      };
 
-      // 2. send to Sui
-      const tx = await createTask(encrypted);
+      // ✅ FIX: pass client FIRST consistently
+      const encrypted = await encryptTask(sealClient, input, policy);
 
-      // 3. store locally for demo UI
+      // store as bytes for Sui
+      const tx = createTaskTx(
+        new TextEncoder().encode(JSON.stringify(encrypted))
+      );
+
       setTasks((prev) => [
         ...prev,
         {
@@ -39,14 +46,19 @@ export default function SealTestDemo({ userPublicKey, userPrivateKey }) {
     }
   };
 
-  // 🔓 Decrypt task
+  // 🔓 DECRYPT
   const handleDecrypt = async (index) => {
     try {
       const task = tasks[index];
 
+      const txBytes = new Uint8Array([]); // demo only
+      const sessionKey = "demo-session";
+
       const decrypted = await decryptTask(
-        task.encrypted,
-        userPrivateKey
+        sealClient,
+        task.encrypted.encryptedObject,
+        sessionKey,
+        txBytes
       );
 
       const updated = [...tasks];
@@ -60,9 +72,8 @@ export default function SealTestDemo({ userPublicKey, userPrivateKey }) {
 
   return (
     <div style={styles.container}>
-      <h2>🔐 Seal Test Demo (Sui + Encryption)</h2>
+      <h2>🔐 Seal Test Demo (Correct Flow)</h2>
 
-      {/* INPUT */}
       <div style={styles.inputBox}>
         <input
           style={styles.input}
@@ -76,7 +87,6 @@ export default function SealTestDemo({ userPublicKey, userPrivateKey }) {
         </button>
       </div>
 
-      {/* TASK LIST */}
       <div style={styles.list}>
         {tasks.map((task, i) => (
           <div key={task.id} style={styles.card}>
@@ -104,42 +114,13 @@ export default function SealTestDemo({ userPublicKey, userPrivateKey }) {
   );
 }
 
-/* simple inline styles for demo */
 const styles = {
-  container: {
-    padding: 20,
-    fontFamily: "Arial",
-  },
-  inputBox: {
-    display: "flex",
-    gap: 10,
-    marginBottom: 20,
-  },
-  input: {
-    flex: 1,
-    padding: 10,
-    border: "1px solid #ccc",
-  },
-  button: {
-    padding: "10px 15px",
-    cursor: "pointer",
-  },
-  list: {
-    marginTop: 20,
-  },
-  card: {
-    border: "1px solid #ddd",
-    padding: 10,
-    marginBottom: 10,
-  },
-  code: {
-    background: "#f5f5f5",
-    padding: 10,
-    fontSize: 12,
-    overflowX: "auto",
-  },
-  smallBtn: {
-    padding: "5px 10px",
-    cursor: "pointer",
-  },
+  container: { padding: 20, fontFamily: "Arial" },
+  inputBox: { display: "flex", gap: 10, marginBottom: 20 },
+  input: { flex: 1, padding: 10, border: "1px solid #ccc" },
+  button: { padding: "10px 15px", cursor: "pointer" },
+  list: { marginTop: 20 },
+  card: { border: "1px solid #ddd", padding: 10, marginBottom: 10 },
+  code: { background: "#f5f5f5", padding: 10, fontSize: 12 },
+  smallBtn: { padding: "5px 10px", cursor: "pointer" },
 };
