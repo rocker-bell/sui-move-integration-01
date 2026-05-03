@@ -72,7 +72,7 @@ export default function SealTestDemo({ sealClient }) {
 
   return (
     <div style={styles.container}>
-      <h2>🔐 Seal Test Demo (Correct Flow)</h2>
+      <h2>Seal Test Demo</h2>
 
       <div style={styles.inputBox}>
         <input
