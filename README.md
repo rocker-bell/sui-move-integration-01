@@ -8,7 +8,7 @@ This project demonstrates core Sui concepts such as **object ownership, permissi
 task_manager
 
 #  Module
-Move / Sui Core  - walrus
+Move / Sui Core  - walrus - seal usecase demo - nautilus usecase demo
 
 #  Deployment Type
 Testnet  
@@ -102,8 +102,18 @@ For first-time use and exploration of the Sui ecosystem, these are the main lear
 - On-chain state design
 - Deployment to Sui testnet
 - Transaction and package verification
+- tracking and working with dependencies versions errors
+- understanding general client  - provider - dependencies methods and functionalities
+- solidifying understanding of the sui ecosysteme architecture
+- Study the product architecture and understanding different factors and components of a product and a digital project
+NB: Each branch in the repository includes the main topic demo (main for main - walrus for walrus - seal for seal - Nautilus for nautilus - integration for integration)
+
+this integration is still in its early phases and still under developpement
 
 
+# what's new
+
+- study the build on sui course, submitting quizes of mission 1 and customer centricity Activity
 
 ## Third-Party Tools & Disclaimer
 

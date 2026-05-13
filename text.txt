@@ -1,0 +1,115 @@
+## Observation
+
+While exploring the Sui ecosystem, I observed that many users struggle to fully interact with blockchain applications because the experience is fragmented and technically complex. Users often need to switch between multiple wallets, decentralized applications (dApps), dashboards, bridges, marketplaces, and tools to complete simple tasks. This creates confusion, especially for new users, and reduces engagement within the ecosystem.
+
+I also noticed that developers building on Sui face discoverability challenges. Even when useful applications exist, users may not easily find or trust them because there is no unified companion platform that organizes and simplifies access to the ecosystem.
+
+These observations inspired the idea for the **SuiCompanion Suite** — an all-in-one companion platform designed to make the Sui ecosystem more usable, accessible, and engaging for both users and developers.
+
+
+
+## Research
+
+I reviewed existing blockchain ecosystems and their supporting tools, including wallets, app aggregators, launchpads, and Web3 dashboards. Most current solutions focus on only one aspect of the ecosystem:
+
+* Wallets mainly handle transactions and token storage.
+* dApp stores are limited and fragmented.
+* Ecosystem dashboards provide information but limited interaction.
+* Developer marketplaces often lack user personalization.
+
+Platforms in ecosystems such as Ethereum and Solana have attempted to improve accessibility, but many still require users to navigate multiple disconnected interfaces.
+
+From this research, I found several remaining gaps:
+
+1. There is no highly integrated “companion operating layer” for the Sui ecosystem.
+2. Users cannot easily customize their blockchain experience in one place.
+3. Developers lack a centralized marketplace to distribute modular ecosystem tools directly to users.
+4. Many blockchain platforms still prioritize technical functionality over usability and user experience.
+
+Because of these gaps, adoption barriers remain high, especially for mainstream users who are unfamiliar with Web3 technologies.
+
+
+
+## Hypothesis
+
+If users are given a unified, customizable companion platform that simplifies access to applications, services, and interactions within the Sui ecosystem, then user engagement, ecosystem participation, and developer visibility will significantly increase.
+
+Additionally, if developers can publish modular applications into a marketplace within the SuiCompanion Suite, then innovation and ecosystem growth on Sui will accelerate because developers will gain easier distribution and users will gain easier discovery.
+
+
+
+## Experiment
+
+To test this hypothesis, I would conduct several forms of customer research:
+
+### 1. User Interviews
+
+Interview current Sui users, crypto beginners, and developers to understand:
+
+* Their biggest frustrations with existing blockchain tools
+* How they currently discover dApps
+* Whether they would value an all-in-one ecosystem companion
+
+### 2. Prototype Testing
+
+Develop a simple prototype or clickable mockup of the SuiCompanion Suite and ask users to complete tasks such as:
+
+* Connecting a wallet
+* Installing a marketplace app
+* Managing ecosystem tools from one dashboard
+
+This would help measure usability and identify friction points.
+
+### 3. Surveys
+
+Run online surveys in Sui and Web3 communities to evaluate:
+
+* Interest in customizable ecosystem companions
+* Desired features
+* Willingness to use a developer marketplace
+* Trust and security concerns
+
+### 4. Developer Validation
+
+Speak with Sui developers to determine:
+
+* Whether they would publish apps to the marketplace
+* What monetization or distribution tools they need
+* Whether the platform would help them reach more users
+
+
+
+## Data Collection
+
+From the customer research, I hope to collect both qualitative and quantitative data, including:
+
+### User Data
+
+* Common usability frustrations in the Sui ecosystem
+* Most requested features
+* Preferred onboarding experiences
+* Frequency of ecosystem interaction
+* Interest in customizable companion apps
+
+### Developer Data
+
+* Interest in publishing apps to the marketplace
+* Challenges in user acquisition
+* Desired SDKs, APIs, and monetization tools
+* Feedback on marketplace functionality
+
+### Behavioral Data
+
+* Time required for users to complete tasks
+* Which features users interact with most
+* App installation preferences
+* Retention and repeat usage intentions
+
+### Validation Metrics
+
+* Percentage of users interested in using the platform
+* Percentage of developers willing to publish apps
+* User satisfaction with simplified workflows
+* Perceived improvement in ecosystem accessibility
+
+This data would help validate whether the SuiCompanion Suite solves a meaningful problem and whether it can become a scalable infrastructure layer for the Sui ecosystem.
